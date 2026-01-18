@@ -77,7 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
         updateProgress(checkCompleted)
     }
 
-    addTaskBtn.addEventListener("click", () => addTask())
+    addTaskBtn.addEventListener("click", (e) => {
+        e.preventDefault()
+        addTask()})
     taskInput.addEventListener("keypress", (e) => {
         if(e.key == "Enter") {
             e.preventDefault()
